@@ -68,7 +68,8 @@ input {
 	&__wrapper {
 		height: 126px;
 		width: 100%;
-		max-width: 1708px;
+		max-width: 1768px;
+		padding: 0 30px;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
@@ -94,6 +95,14 @@ input {
 		a {
 			color: $cWhite;
 			text-decoration: none;
+			transition: color 0.3s;
+		}
+		a:hover {
+			color: #a6aeae;
+			text-decoration: underline;
+		}
+		a:active {
+			color: #84bfbf;
 		}
 	}
 	&__list-item:last-child {
@@ -107,19 +116,36 @@ input {
 		font-size: 32px;
 		color: $cWhite;
 		text-decoration: none;
+		transition: color 0.3s;
+		&:hover {
+			color: #a6aeae;
+		}
+		&:active {
+			color: #84bfbf;
+		}
 	}
 	&__phone-desc {
 		display: block;
 		font-size: 20px;
 		color: $cWhite;
 	}
+	&__nav-btn {
+		display: none;
+		width: 35px;
+		height: 35px;
+		margin-left: 35px;
+		border: none;
+		background: url(../img/burger.svg) no-repeat center;
+		background-size: cover;
+		cursor: pointer;
+	}
+	&__nav-btn--close {
+		background: url(../img/close.svg) no-repeat center;
+		background-size: 70%;
+	}
 }
 
 // ////////////////////////////////
-
-.page-main {
-	padding-bottom: 102px;
-}
 
 .main-title {
 	margin-bottom: 60px;
@@ -154,6 +180,13 @@ input {
 		font-size: 14px;
 		margin-right: 42px;
 		cursor: pointer;
+		transition: color 0.3s;
+		&:hover {
+			color: #037575;
+		}
+		&:active {
+			color: #757253;
+		}
 	}
 	&__switcher-item::after {
 		position: absolute;
@@ -204,12 +237,24 @@ input {
 		border-color: $c3;
 		.cards__button {
 			background-color: $c3;
+			&:hover {
+				background: darken( $c3, 15% );
+			}
+			&:active {
+				background: darken( $c3, 25% );
+			}
 		}
 	}
 	&__item--sold {
 		border-color: #a1a1a1;
 		.cards__button {
 			background-color: #a1a1a1;
+			&:hover {
+				background: darken( #a1a1a1, 15% );
+			}
+			&:active {
+				background: darken( #a1a1a1, 25% );
+			}
 		}
 	}
 	&__top {
@@ -333,6 +378,13 @@ input {
 		letter-spacing: 1px;
 		text-decoration: none;
 		background-color: $c1;
+		transition: background 0.3s;
+		&:hover {
+			background: lighten( $c1, 5% );
+		}
+		&:active {
+			background: lighten( $c1, 10% );
+		}
 	}
 }
 
@@ -353,6 +405,13 @@ input {
 	color: #fff;
 	font-family: $ff;
 	cursor: pointer;
+	transition: all 0.3s;
+	&:hover {
+		background: darken( $c2, 3% );
+	}
+	&:active {
+		background: darken( $c2, 6% );
+	}
 }
 
 // //////////////////////
@@ -362,6 +421,7 @@ input {
 	display: flex;
 	justify-content: space-between;
 	background-color: $c2;
+	margin-bottom: 102px;
 	&__text {
 		h4 {
 			font-size: 34px;
@@ -414,6 +474,13 @@ input {
 		text-transform: uppercase;
 		font-size: 16px;
 		cursor: pointer;
+		transition: background 0.3s;
+		&:hover {
+			background: darken( $c3, 15% );
+		}
+		&:active {
+			background: darken( $c3, 25% );
+		}
 	}
 	&__form-check {
 		margin-bottom: 0;
@@ -442,6 +509,236 @@ input {
 			top: 5px;
 			background-color: #fff;
 			border-radius: 2px;
+		}
+	}
+}
+
+// //////////////////////////////
+
+@media (max-width: 1600px) {
+	.page-header {
+		&__wrapper {
+			justify-content: space-between;
+		}
+		&__logo {
+			margin-right: 0;
+		}
+		&__nav {
+			margin-right: 0;
+		}
+		&__list-item {
+			font-size: 18px;
+		}
+		&__phone {
+			margin-right: 0;
+		}
+	}
+}
+
+@media (max-width: 1310px) {
+	.container {
+		max-width: 1050px;
+	}
+	.page-header {
+		&__nav {
+			margin-right: 0;
+		}
+		&__list-item {
+			font-size: 16px;
+			margin-right: 25px;
+		}
+		&__phone-link {
+			font-size: 20px;
+		}
+		&__phone-desc {
+			font-size: 16px;
+		}
+	}
+	.main-title {
+		font-size: 35px;
+		margin-bottom: 40px;
+	}
+	.cards__item {
+		max-width: 290px;
+		margin-bottom: 35px;
+	}
+	.search-result {
+		padding: 25px 40px 74px;
+	}
+	.cards {
+		&__content {
+			padding: 0 25px;
+		}
+		&__title {
+			font-size: 22px;
+		}
+	}
+	.subscribe__form {
+		margin-right: 0;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.container {
+		max-width: 790px;
+	}
+	.page-header {
+		&__wrapper {
+			position: relative;
+			height: 90px;
+		}
+		&__logo {
+			width: 25px;
+			height: 64px;
+		}
+		&__nav {
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 50%;
+			border-top: 1px solid #003d3d;
+			transform: translateX(50%);
+			width: calc(100% - 60px);
+			background: $c1;
+			z-index: 10;
+		}
+		&__nav--open {
+			display: block;
+		}
+		&__list {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__list-item {
+			margin-right: 0;
+			width: 100%;
+			text-align: center;
+			border-bottom: 1px solid #003d3d;
+			a {
+				display: block;
+				padding: 12px 0;
+			}
+		}
+		&__list-item:last-child {
+			border-bottom: none;
+		}
+		&__phone {
+			margin-left: auto;
+		}
+		&__nav-btn {
+			display: block;
+		}
+	}
+	.main-title {
+		margin-left: 70px;
+		font-size: 30px;
+	}
+	.search-result {
+		padding: 25px 70px 74px;
+	}
+	.subscribe {
+		flex-direction: column;
+		&__text {
+			h4 {
+				font-size: 30px;
+			}
+			span {
+				font-size: 16px;
+			}
+		}
+		&__form-check {
+			label {
+				font-size: 16px;
+				&::before {
+					top: 3px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 790px) {
+	.container {
+		max-width: 570px;
+	}
+	.main-title {
+		margin-left: 0;
+		text-align: center;
+	}
+	.cards {
+		justify-content: center;
+		&__item {
+			max-width: 320px;
+		}
+	}
+	.search-result {
+		padding: 25px 15px 74px;
+		&__filter {
+			max-width: 320px;
+			flex-direction: column;
+			margin: 0 auto 30px;
+		}
+		&__filter-desc {
+			margin-bottom: 5px;
+		}
+		&__switcher {
+			margin-left: 0;
+		}
+	}
+	.subscribe {
+		&__email {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.main-title {
+		font-size: 24px;
+	}
+	.search-result {
+		margin-bottom: 50px;
+	}
+	.page-header {
+		&__wrapper {
+			padding: 0 15px;
+		}
+		&__nav {
+			width: calc(100% - 30px);
+		}
+	}
+	.cards {
+		&__content {
+			padding: 0 20px;
+		}
+		&__title {
+			font-size: 20px;
+		}
+	}
+	.show-more {
+		height: 50px;
+	}
+	.subscribe {
+		padding: 25px;
+		&__form {
+			justify-content: center;
+		}
+		&__form-check {
+			width: 100%;
+			margin: 10px auto 0;
+			text-align: center;
+		}
+		&__text {
+			text-align: center;
+		}
+		&__submit {
+			max-width: 319px;
+		}
+		&__email {
+			padding: 0 10px;
+			font-size: 16px;
 		}
 	}
 }
