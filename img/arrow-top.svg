@@ -2,10 +2,10 @@
   viewBox="0 0 876 876" fill="#a7a37e">
   <defs>
     <clipPath id="clip-path" transform="translate(0 0)">
-      <rect width="876" height="876" fill="none" />
+      <rect width="876" height="876" />
     </clipPath>
   </defs>
-  <title>3333333333</title>
+  <title></title>
   <g clip-path="url(#clip-path)">
     <path
       d="M438,0C196.1,0,0,196.1,0,438S196.1,876,438,876,876,679.9,876,438,679.9,0,438,0M634.17,534.57a24,24,0,0,1-33.94,0L438,372.34,275.77,534.57a24,24,0,1,1-33.94-33.94L421,321.43a24,24,0,0,1,33.94,0l179.2,179.2a24,24,0,0,1,0,33.94"

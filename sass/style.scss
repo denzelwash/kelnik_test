@@ -147,6 +147,10 @@ input {
 
 // ////////////////////////////////
 
+.page-main {
+	position: relative;
+}
+
 .main-title {
 	margin-bottom: 60px;
 	margin-left: 107px;
@@ -513,6 +517,20 @@ input {
 	}
 }
 
+.scroll-up {
+	position: fixed;
+	display: none;
+	width: 80px;
+	height: 80px;
+	right: 100px;
+	bottom: 100px;
+	border: none;
+	background: url(../img/arrow-top.svg) no-repeat center;
+	background-size: cover;
+	cursor: pointer;
+	z-index: 20;
+}
+
 // //////////////////////////////
 
 @media (max-width: 1600px) {
@@ -576,6 +594,9 @@ input {
 	.subscribe__form {
 		margin-right: 0;
 		margin-top: 10px;
+	}
+	.scroll-up {
+		right: 20px;
 	}
 }
 
@@ -691,6 +712,11 @@ input {
 			margin-right: 0;
 			margin-bottom: 15px;
 		}
+	}
+	.scroll-up {
+		right: 20px;
+		width: 40px;
+		height: 40px;
 	}
 }
 

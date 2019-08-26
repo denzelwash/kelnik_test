@@ -127,6 +127,9 @@ input {
     -webkit-background-size: 70% 70%;
             background-size: 70%; }
 
+.page-main {
+  position: relative; }
+
 .main-title {
   margin-bottom: 60px;
   margin-left: 107px;
@@ -508,6 +511,20 @@ input {
       -webkit-border-radius: 2px;
               border-radius: 2px; }
 
+.scroll-up {
+  position: fixed;
+  display: none;
+  width: 80px;
+  height: 80px;
+  right: 100px;
+  bottom: 100px;
+  border: none;
+  background: url(../img/arrow-top.svg) no-repeat center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  cursor: pointer;
+  z-index: 20; }
+
 @media (max-width: 1600px) {
   .page-header__wrapper {
     -webkit-box-pack: justify;
@@ -549,7 +566,9 @@ input {
     font-size: 22px; }
   .subscribe__form {
     margin-right: 0;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .scroll-up {
+    right: 20px; } }
 
 @media (max-width: 1050px) {
   .container {
@@ -648,7 +667,11 @@ input {
       margin-left: 0; }
   .subscribe__email {
     margin-right: 0;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .scroll-up {
+    right: 20px;
+    width: 40px;
+    height: 40px; } }
 
 @media (max-width: 570px) {
   .main-title {
