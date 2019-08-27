@@ -187,6 +187,10 @@ input {
     background-position: center;
     -webkit-border-radius: 50%;
             border-radius: 50%; }
+  .search-result__switcher-item--rotate::after {
+    background-image: url(../img/filter-arrow-top.png);
+    background-repeat: no-repeat;
+    background-position: center; }
   .search-result__switcher-item:last-child {
     margin-right: 0; }
   .search-result__switcher-item--active {
@@ -523,6 +527,21 @@ input {
   -webkit-background-size: cover;
           background-size: cover;
   cursor: pointer;
+  z-index: 20; }
+
+.favourites-alert {
+  position: fixed;
+  display: none;
+  width: 100%;
+  max-width: 250px;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #0b832b;
   z-index: 20; }
 
 @media (max-width: 1600px) {

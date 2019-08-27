@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
@@ -51,16 +53,16 @@
       <section class="search-result">
         <div class="search-result__filter">
           <span class="search-result__filter-desc">Сортировать по:</span>
-          <ul class="search-result__switcher">
-            <li class="search-result__switcher-item  search-result__switcher-item--active">Цене</li>
-            <li class="search-result__switcher-item">Комнатам</li>
+          <ul class="search-result__switcher js-filter">
+            <li class="search-result__switcher-item" data-filter="price">Цене</li>
+            <li class="search-result__switcher-item" data-filter="room">Комнатам</li>
           </ul>
         </div>
         <div class="cards">
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="0">
             <div class="cards__top">
               <ul class="cards__promo"></ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -84,10 +86,10 @@
             </div>
             <a class="cards__button" href="#">Забронировано</a>
           </div>
-          <div class="cards__item">
+          <div class="cards__item" data-room="1">
             <div class="cards__top">
               <ul class="cards__promo"></ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -111,10 +113,10 @@
             </div>
             <a class="cards__button" href="#">Свободно</a>
           </div>
-          <div class="cards__item  cards__item--sold">
+          <div class="cards__item  cards__item--sold" data-room="2">
             <div class="cards__top">
               <ul class="cards__promo"></ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -138,10 +140,10 @@
             </div>
             <a class="cards__button" href="#">Продано</a>
           </div>
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="3">
             <div class="cards__top">
               <ul class="cards__promo"></ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -165,19 +167,19 @@
             </div>
             <a class="cards__button" href="#">Забронировано</a>
           </div>
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="0">
             <div class="cards__top">
               <ul class="cards__promo">
                 <li>-17%</li>
                 <li>Шок цена!</li>
               </ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
                 <img src="img/apartments/a5.png" alt="">
               </div>
-              <h2 class="cards__title">Студия  №25</h2>
+              <h2 class="cards__title">Студия №25</h2>
               <table class="cards__table">
                 <tr>
                   <td>черновая отделка</td>
@@ -195,12 +197,12 @@
             </div>
             <a class="cards__button" href="#">Забронировано</a>
           </div>
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="4">
             <div class="cards__top">
               <ul class="cards__promo">
                 <li>-6%</li>
               </ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -224,10 +226,10 @@
             </div>
             <a class="cards__button" href="#">Забронировано</a>
           </div>
-          <div class="cards__item">
+          <div class="cards__item" data-room="1">
             <div class="cards__top">
               <ul class="cards__promo"></ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -251,10 +253,10 @@
             </div>
             <a class="cards__button" href="#">Свободно</a>
           </div>
-          <div class="cards__item">
+          <div class="cards__item" data-room="3">
             <div class="cards__top">
               <ul class="cards__promo"></ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -278,13 +280,13 @@
             </div>
             <a class="cards__button" href="#">Свободно</a>
           </div>
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="1">
             <div class="cards__top">
               <ul class="cards__promo">
                 <li>-9%</li>
                 <li>Шок цена!</li>
               </ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -308,12 +310,12 @@
             </div>
             <a class="cards__button" href="#">Забронировано</a>
           </div>
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="0">
             <div class="cards__top">
               <ul class="cards__promo">
                 <li>-6%</li>
               </ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -337,10 +339,10 @@
             </div>
             <a class="cards__button" href="#">Забронировано</a>
           </div>
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="1">
             <div class="cards__top">
               <ul class="cards__promo"></ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -364,12 +366,12 @@
             </div>
             <a class="cards__button" href="#">Забронировано</a>
           </div>
-          <div class="cards__item  cards__item--booked">
+          <div class="cards__item  cards__item--booked" data-room="2">
             <div class="cards__top">
               <ul class="cards__promo">
                 <li>-6%</li>
               </ul>
-              <span class="cards__favourites"></span>
+              <span class="cards__favourites js-favourites-btn"></span>
             </div>
             <div class="cards__content">
               <div class="cards__image">
@@ -394,14 +396,14 @@
             <a class="cards__button" href="#">Забронировано</a>
           </div>
         </div>
-        <button class="show-more"><span>Показать еще 20</span></button>
+        <button class="show-more js-more-btn"><span>Показать еще 20</span></button>
       </section>
       <section class="subscribe">
         <div class="subscribe__text">
           <h4>Успей купить!</h4>
           <span>Подпишись и успей словить все акции</span>
         </div>
-        <form class="subscribe__form" action="#" method="post">
+        <form class="subscribe__form js-form" action="#" method="post">
           <input class="subscribe__email" type="email" name="email" placeholder="E-mail" required>
           <input class="subscribe__submit" type="submit" value="Подписаться">
           <p class="subscribe__form-check">
@@ -412,7 +414,9 @@
       </section>
     </div>
     <button class="scroll-up js-up-btn"></button>
+    <div class="favourites-alert"></div>
   </main>
   <script src="js/script.js"></script>
 </body>
+
 </html>
